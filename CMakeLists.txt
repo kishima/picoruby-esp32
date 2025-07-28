@@ -15,14 +15,17 @@ idf_component_register(
     ${COMPONENT_DIR}/picoruby/mrbgems/picoruby-mbedtls/ports/esp32/timing_alt.c
     ${COMPONENT_DIR}/picoruby/mrbgems/picoruby-i2c/ports/esp32/i2c.c
     ${COMPONENT_DIR}/picoruby/mrbgems/picoruby-uart/ports/esp32/uart.c
+    ${COMPONENT_DIR}/picoruby/mrbgems/picoruby-m5unified/ports/esp32/m5unified.cpp
   INCLUDE_DIRS
     ${COMPONENT_DIR}
     ${COMPONENT_DIR}/picoruby/include
     ${COMPONENT_DIR}/picoruby/mrbgems/picoruby-mrubyc/lib/mrubyc/src
+    ${COMPONENT_DIR}/picoruby/mrbgems/picoruby-mrubyc/include
     ${COMPONENT_DIR}/picoruby/mrbgems/picoruby-machine/include
     ${COMPONENT_DIR}/picoruby/mrbgems/picoruby-filesystem-fat/ports/esp32
     ${COMPONENT_DIR}/picoruby/mrbgems/mruby-compiler2/include
     ${COMPONENT_DIR}/picoruby/mrbgems/mruby-compiler2/lib/prism/include
+    ${COMPONENT_DIR}/picoruby/mrbgems/picoruby-m5unified/include
   PRIV_REQUIRES
     esp_driver_gpio
     esp_driver_uart
@@ -34,6 +37,8 @@ idf_component_register(
     esp_timer
     esp_hw_support
     spi_flash
+    m5gfx
+    m5unified
 )
 
 add_definitions(
