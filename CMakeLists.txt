@@ -26,6 +26,15 @@ idf_component_register(
     ${COMPONENT_DIR}/picoruby/mrbgems/picoruby-mbedtls/ports/common/md.c
     ${COMPONENT_DIR}/picoruby/mrbgems/picoruby-i2c/ports/esp32/i2c.c
     ${COMPONENT_DIR}/picoruby/mrbgems/picoruby-uart/ports/esp32/uart.c
+    ${COMPONENT_DIR}/picoruby/mrbgems/picoruby-m5unified/ports/esp32/m5unified_core.cpp
+    ${COMPONENT_DIR}/picoruby/mrbgems/picoruby-m5unified/ports/esp32/m5gfx_color.cpp
+    ${COMPONENT_DIR}/picoruby/mrbgems/picoruby-m5unified/ports/esp32/m5gfx_display.cpp
+    ${COMPONENT_DIR}/picoruby/mrbgems/picoruby-m5unified/ports/esp32/m5gfx_draw.cpp
+    ${COMPONENT_DIR}/picoruby/mrbgems/picoruby-m5unified/ports/esp32/m5gfx_fill.cpp
+    ${COMPONENT_DIR}/picoruby/mrbgems/picoruby-m5unified/ports/esp32/m5gfx_image.cpp
+    ${COMPONENT_DIR}/picoruby/mrbgems/picoruby-m5unified/ports/esp32/m5gfx_lowlevel.cpp
+    ${COMPONENT_DIR}/picoruby/mrbgems/picoruby-m5unified/ports/esp32/m5gfx_text.cpp
+    ${COMPONENT_DIR}/picoruby/mrbgems/picoruby-m5unified/ports/esp32/m5gfx_util.cpp
   INCLUDE_DIRS
     ${COMPONENT_DIR}
     ${COMPONENT_DIR}/picoruby/include
@@ -36,6 +45,7 @@ idf_component_register(
     ${COMPONENT_DIR}/picoruby/mrbgems/picoruby-filesystem-fat/ports/esp32
     ${COMPONENT_DIR}/picoruby/mrbgems/mruby-compiler2/include
     ${COMPONENT_DIR}/picoruby/mrbgems/mruby-compiler2/lib/prism/include
+    ${COMPONENT_DIR}/picoruby/mrbgems/picoruby-m5unified/include
   PRIV_REQUIRES
     esp_driver_gpio
     esp_driver_uart
@@ -49,6 +59,8 @@ idf_component_register(
     spi_flash
     nvs_flash
     esp_wifi
+    M5Unified
+    M5GFX
 )
 
 add_definitions(
